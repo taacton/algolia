@@ -1,2 +1,6 @@
-# algolia
-Playing around with Algolia. This is a demo app which loads some basic information about the planets in the solar system through `add_index_planets.py` to my Algolia account, then uses node and _InstantSearch.js_ to create a frontend app to search through the data.
+# Algolia
+
+## Description:
+This project contains my attempts to play around with uploading indicies to Algolia's platform and creating a simple frontend app using [InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/).
+
+`demo_app_planets` contains my first app, which was built pre-interview to better understand product while `demo_app_wines` is my submission for the technical assesment. Please refer to the `README.md` inside each app's folder for more information.
