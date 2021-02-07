@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="shortcut icon" href="./favicon.png">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
+  <link rel="stylesheet" href="./src/index.css">
+  <link rel="stylesheet" href="./src/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <title>Bordeaux Wines</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header-title">
+      <a href="/">Tom's Bordeaux Wine Index</a>
+    </h1>
+    <p class="header-subtitle">
+      built using
+      <a href="https://github.com/algolia/instantsearch.js">
+        InstantSearch.js
+      </a>
+    </p>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </header>
+
+  <div class="left-panel">
+    <div id="clear-refinements"></div>
+    <ul class="collapsible" data-collapsible="expandable">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">filter_list</i>Type</div>
+        <div class="collapsible-body">
+          <div id="type-list"></div>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">location_on</i>Domain</div>
+        <div class="collapsible-body">
+          <div id="domain-list"></div>
+        </div>
+      </li>
+      <li>    
+        <div class="collapsible-header"><i class="material-icons">date_range</i>Year</div>
+        <div class="collapsible-body">
+          <div id="year-list"></div>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">star_half</i>Rating</div>
+        <div class="collapsible-body">
+          <div id="rating-list"></div>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">euro_symbol</i>Price</div>
+        <div class="collapsible-body">
+          <div id="price-list"></div>
+        </div>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="right-panel">
+    <div class="container">
+      <div class="search-panel">
+        <div class="search-panel__results">
+          <div id="searchbox"></div>
+          <div id="sort-by"></div>
+          <div id="hits"></div>
+        </div>
+      </div>
+      <div id="pagination"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.13.2"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
