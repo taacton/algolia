@@ -1,5 +1,7 @@
 /* global algoliasearch instantsearch */
 
+// This file contains all the configuration for widgets called using instantSearch.js
+
 const searchClient = algoliasearch(
   '8JYC6YT0ZO',
   '07653e954a1607260aa266b8e32c2b03'
@@ -16,7 +18,7 @@ search.addWidgets([
     container: '#searchbox',
   }),
 
-  instantsearch.widgets.sortBy({ // The sortBy widget doesn't seem to work :(
+  instantsearch.widgets.sortBy({ // The sortBy widget doesn't seem to work, I think my values aren't setup properly to call my replica index
     container: '#sort-by',
     items: [
       { label: 'Featured', value: 'instant_search' },
@@ -98,7 +100,7 @@ search.addWidgets([
       root: 'row',
       item: 'hit-card card white darken-1',
     },
-    templates: {
+    templates: { // Using a template to have more control over the layout of each hit
       item(item) {
         text = `
           <div class="card-content black-text">
@@ -128,7 +130,7 @@ search.addWidgets([
   }),
 
   instantsearch.widgets.configure({
-    hitsPerPage: 8
+    hitsPerPage: 10
   })
 ]);
 
