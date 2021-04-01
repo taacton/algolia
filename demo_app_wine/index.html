@@ -13,6 +13,23 @@
   <link rel="stylesheet" href="./src/app.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <title>Bordeaux Wines</title>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '200153284881111');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=200153284881111&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -70,10 +87,13 @@
   <div class="right-panel">
     <div class="container">
       <div class="search-panel">
+        
         <div class="search-panel__results">
+          
           <div id="searchbox"></div>
+          <img style="margin-top:-40px; margin-left:-200px;" src="./algolia.png">
           <div id="sort-by"></div> <!-- Not working right now -->
-          <div id="hits"></div>
+          <div style="margin-top: 50px;" id="hits"></div>
         </div>
       </div>
       <div id="pagination"></div>
