@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="shortcut icon" href="./favicon.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
+  <link rel="stylesheet" href="./src/index.css">
+  <link rel="stylesheet" href="./src/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <title>Bordeaux Wines</title>
+  <!-- Use UTM parameters to get product details -->
+  <script> 
+    url = decodeURI(window.location.search).split("&");
+    name = url[0].replace('?name=', '');
+    domain = url[1].replace('domain=', '');
+    year = url[2].replace('year=', '');
+    price = url[3].replace('price=', '');
+  </script> 
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '200153284881111');
+    fbq('track', 'PageView');
+    fbq('track', 'Purchase', {currency: 'EUR', value: price});
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=200153284881111&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header-title">
+      <a href="/">Tom's Bordeaux Wine Index</a>
+    </h1>
+    <p class="header-subtitle">
+      built using
+      <a href="https://github.com/algolia/instantsearch.js">
+        InstantSearch.js
+      </a>
+    </p>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </header>
+
+  <div class="container">
+    <h1>Purchase successful</h1>
+    <h3>Thank you for your purchase!</h3>
+    <a class="waves-effect waves-light btn" style="background-color: #c5cae9;" href="index.html">Go Back</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.13.2"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="./src/app.js"></script>
+</body>
+
+</html>

@@ -113,8 +113,7 @@ search.addWidgets([
             <p>€${item.price}</p>
           </div>
           <div class="card-action">
-            <a class="card-action" href="#">Learn more</a>
-            <a class="card-action buy-now" href="#">Buy Now</a>
+            <a class="waves-effect waves-light btn" style="background-color: #c5cae9; float: right;" href="purchase.html?name=${item.name}&domain=${item.domain}&year=${item.year}&price=${item.price}">Buy Now</a>
           </div>
         `;
         return text
