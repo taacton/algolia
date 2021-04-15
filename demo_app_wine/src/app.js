@@ -115,6 +115,7 @@ search.addWidgets([
           <div class="card-action">
             <a class="waves-effect waves-light btn" style="background-color: #c5cae9; float: right;" href="purchase.html?name=${item.name}&domain=${item.domain}&year=${item.year}&price=${item.price}">Buy Now</a>
           </div>
+          <script>fbq('track', 'ViewContent', {'content_name': '${item.name}', 'value': '${item.price}', 'currency': 'EUR'});</script>
         `;
         return text
       }
