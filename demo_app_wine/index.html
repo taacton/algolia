@@ -25,6 +25,7 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '200153284881111');
     fbq('track', 'PageView');
+    fbq('track', 'Purchase', {'value': 50, 'currency': 'GBP', 'contents': [{'id': '123', 'quantity': 2}, {'id': '456', 'quantity': 1}], 'content_type': 'product', 'type_value': [{'white': 40, 'red': 10}]}, {em: 'thomasacton@meta.com'});
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=200153284881111&ev=PageView&noscript=1"
